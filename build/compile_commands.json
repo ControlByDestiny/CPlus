@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/opt/Workspace/CPlus/build/src",
+  "command": "/usr/bin/g++   -O3 -DNDEBUG -std=gnu++11   -Wall -g -o CMakeFiles/main.dir/Main.cpp.o -c /opt/Workspace/CPlus/src/Main.cpp",
+  "file": "/opt/Workspace/CPlus/src/Main.cpp",
+  "output": "src/CMakeFiles/main.dir/Main.cpp.o"
+},
+{
+  "directory": "/opt/Workspace/CPlus/build/src/leetcode",
+  "command": "/usr/bin/g++   -O3 -DNDEBUG -std=gnu++11   -Wall -g -o CMakeFiles/leetcode.dir/Main.cpp.o -c /opt/Workspace/CPlus/src/leetcode/Main.cpp",
+  "file": "/opt/Workspace/CPlus/src/leetcode/Main.cpp",
+  "output": "src/leetcode/CMakeFiles/leetcode.dir/Main.cpp.o"
+}
+]

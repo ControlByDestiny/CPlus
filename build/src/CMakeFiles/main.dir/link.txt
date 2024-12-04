@@ -1,0 +1,1 @@
+/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/main.dir/Main.cpp.o -o /opt/Workspace/CPlus/output/main 
