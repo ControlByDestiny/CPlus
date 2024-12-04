@@ -529,3 +529,42 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "third-party/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "third-party/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/opt/Workspace/CPlus/build/CMakeFiles/CMakeScratch/TryCompile-0bIxBb"
+      binary: "/opt/Workspace/CPlus/build/CMakeFiles/CMakeScratch/TryCompile-0bIxBb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/opt/Workspace/CPlus/build/CMakeFiles/CMakeScratch/TryCompile-0bIxBb'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d9c5c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d9c5c.dir/build.make CMakeFiles/cmTC_d9c5c.dir/build
+        gmake[1]: 进入目录“/opt/Workspace/CPlus/build/CMakeFiles/CMakeScratch/TryCompile-0bIxBb”
+        Building C object CMakeFiles/cmTC_d9c5c.dir/src.c.o
+        /usr/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d9c5c.dir/src.c.o -c /opt/Workspace/CPlus/build/CMakeFiles/CMakeScratch/TryCompile-0bIxBb/src.c
+        Linking C executable cmTC_d9c5c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9c5c.dir/link.txt --verbose=1
+        /usr/bin/gcc CMakeFiles/cmTC_d9c5c.dir/src.c.o -o cmTC_d9c5c 
+        gmake[1]: 离开目录“/opt/Workspace/CPlus/build/CMakeFiles/CMakeScratch/TryCompile-0bIxBb”
+        
+      exitCode: 0
+...
