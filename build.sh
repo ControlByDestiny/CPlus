@@ -1,12 +1,28 @@
 #!/bin/bash
 set -e
 BUILD_HOME=$(cd $(dirname $0); pwd)
-TMP_DIR=$BUILD_HOME/build
-# BUILD_DIR=
+BUILD_DIR=$BUILD_HOME/build
+BUILD_OUTPUT_PATH=$BUILD_HOME/output
 echo -e "$BUILD_HOME"
+function build() {
+  cmake -DBUILD_OUTPUT_PATH="$BUILD_OUTPUT_PATH" -S $BUILD_HOME -B $BUILD_DIR
+  cd $BUILD_DIR && make -j4
+}
+
+function clean () {
+  rm -rf $BUILD_DIR
+  rm -rf $BUILD_OUTPUT_PATH
+}
+
 function main {
-  cmake -DBUILD_HOME="$BUILD_HOME" -S $BUILD_HOME -B $TMP_DIR
-  cd $TMP_DIR && make -j4
+  case $1 in
+    --build)
+      build "$@"
+      ;;
+    --clean)
+      clean "$@"
+      ;;
+    esac
 }
 
 main "$@"
