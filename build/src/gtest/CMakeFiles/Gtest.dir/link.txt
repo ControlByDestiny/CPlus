@@ -1,1 +1,0 @@
-/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/Gtest.dir/Gtest.cpp.o -o /opt/Workspace/CPlus/output/Gtest  ../../lib/libgtest_main.a ../../lib/libgtest.a 

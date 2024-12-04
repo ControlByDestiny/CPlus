@@ -1,2 +1,2 @@
-add_executable(gtest Gtest.cpp)
-target_link_libraries(Gtest gtest_main)
+add_executable(gtest_demo Gtest.cpp)
+target_link_libraries(gtest_demo gtest_main)

@@ -1,1 +1,0 @@
-/usr/bin/g++ -O3 -DNDEBUG CMakeFiles/leetcode.dir/Main.cpp.o -o /opt/Workspace/CPlus/output/leetcode 
